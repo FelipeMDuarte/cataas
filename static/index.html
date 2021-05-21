@@ -1,0 +1,25 @@
+
+{% block content %}
+<form action="" method="post">
+    <div class="form-group">
+        <label for="InputUrl">URL</label>
+        <input name="url" class="form-control" id="InputURL"  placeholder="Enter url">
+        <button name="submit" type="submit" class="btn btn-primary" value="insert">CADASTRAR</button>
+    </div>
+    -------------------------------------------------
+</form>
+
+    <br>
+    URLs CADASTRADAS
+    <br>
+{%  for x in url_list %}
+<form action="" method="POST">
+    <div class="form-group">
+        <label for="Url">-</label>
+        <input name="url" class="form-control" id="URL"  value={{ x }} disabled>
+        <button name="delete" type="submit" class="btn btn-primary" value={{ x }}>REMOVER</button>
+    </div>
+</form>
+{% endfor %}
+    {{ message }}
+{% endblock %}

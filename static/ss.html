@@ -1,0 +1,17 @@
+{% block content %}
+
+{%  for x in url_list_with_ss.keys() %}
+    <br>
+    <br>
+        {{ x }}
+    <br>
+    <br>
+
+{%  for y in url_list_with_ss[x] %}
+        {{ y }}
+        <br>
+        <img src="{{ y }}" alt="error">
+        <br>
+{% endfor %}
+{% endfor %}
+{% endblock %}
